@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auto-Mortars-Continued", "Source\Auto-Mortars-Continued.csproj", "{38879305-2EE6-423D-8474-74965DF9767B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About", "About", "{78974D3B-E82B-46B8-B3F7-FF9A0CE7BE8B}"
+	ProjectSection(SolutionItems) = preProject
+		About\About.xml = About\About.xml
+		About\preview.png = About\preview.png
+		About\PublishedFileId.txt = About\PublishedFileId.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Defs", "Defs", "{45C5F5F8-CB29-47DB-8CA5-FC4ADE7F9A91}"
+	ProjectSection(SolutionItems) = preProject
+		Defs\Buildings_Security_Automortar.xml = Defs\Buildings_Security_Automortar.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Languages", "Languages", "{FBFE4500-90F5-42B8-B595-D42FBCA6BA82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Textures", "Textures", "{154CC721-CD40-4CE9-AE14-2B7A74AC135C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Things", "Things", "{25EAD6D7-564A-4E4E-B7D5-CFD3EF3C3E8C}"
+	ProjectSection(SolutionItems) = preProject
+		Textures\Things\AutoMortar_Base.png = Textures\Things\AutoMortar_Base.png
+		Textures\Things\AutoMortar_MenuIcon.png = Textures\Things\AutoMortar_MenuIcon.png
+		Textures\Things\AutoMortar_Top.png = Textures\Things\AutoMortar_Top.png
+		Textures\Things\yoink.png = Textures\Things\yoink.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38879305-2EE6-423D-8474-74965DF9767B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38879305-2EE6-423D-8474-74965DF9767B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38879305-2EE6-423D-8474-74965DF9767B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38879305-2EE6-423D-8474-74965DF9767B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25EAD6D7-564A-4E4E-B7D5-CFD3EF3C3E8C} = {154CC721-CD40-4CE9-AE14-2B7A74AC135C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC9FC268-BB1E-4E21-8432-843713A20D37}
+	EndGlobalSection
+EndGlobal
