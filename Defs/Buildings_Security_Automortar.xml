@@ -63,10 +63,10 @@
         <showFuelGizmo>true</showFuelGizmo>
         <minimumFueledThreshold>1</minimumFueledThreshold>
         <fuelMultiplier>1</fuelMultiplier>
-        <!--<factorByDifficulty>true</factorByDifficulty>-->
+        <factorByDifficulty>false</factorByDifficulty>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
         <outOfFuelMessage>Cannot shoot: Needs shells</outOfFuelMessage>
-        <fuelIconPath>Things/yoink</fuelIconPath>
+        <fuelIconPath>Things/HE_Shell</fuelIconPath>
       </li>
     </comps>
     <passability>PassThroughOnly</passability>
@@ -97,7 +97,7 @@
     <researchPrerequisites>
       <li>Mortars</li>
     </researchPrerequisites>
-    <uiIconScale>0.6</uiIconScale>
+    <uiIconScale>0.95</uiIconScale>
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
@@ -135,7 +135,7 @@
       <AccuracyTouch>0.1</AccuracyTouch>
       <AccuracyShort>0.1</AccuracyShort>
       <AccuracyMedium>0.1</AccuracyMedium>
-      <AccuracyLong>0.996</AccuracyLong>
+      <AccuracyLong>0.995</AccuracyLong>
       <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
       <Mass>40</Mass>

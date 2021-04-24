@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<packageId>Flyingstar.AutoMortarsUnofficial</packageId>
-	<name>Auto-Mortars(1.1, Unofficial)</name>
-	<author>Flyingstar</author>
-	<supportedVersions><li>1.1</li></supportedVersions>
-	<description>Unofficial 1.1 update. Adds an automatic mortar. 3x3 and can hold up to 21 H.E. shells. Fires less often but more accurately than a normal mortar. Original author: Blake.
+	<packageId>Bia10.AutoMortarsUnofficial</packageId>
+	<name>Auto-Mortars-Continued</name>
+	<author>Blake, Flyingstar, Bia10</author>
+	<supportedVersions><li>1.2</li></supportedVersions>
+	<description>Unofficial 1.2 update. Adds an automatic mortar. 3x3 and can hold up to 21 H.E. shells. Fires less often but more accurately than a normal mortar. Original author: Blake.
 	</description>
 </ModMetaData>

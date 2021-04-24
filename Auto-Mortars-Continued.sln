@@ -26,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Things", "Things", "{25EAD6
 		Textures\Things\AutoMortar_Base.png = Textures\Things\AutoMortar_Base.png
 		Textures\Things\AutoMortar_MenuIcon.png = Textures\Things\AutoMortar_MenuIcon.png
 		Textures\Things\AutoMortar_Top.png = Textures\Things\AutoMortar_Top.png
-		Textures\Things\yoink.png = Textures\Things\yoink.png
+		Textures\Things\HE_Shell.png = Textures\Things\HE_Shell.png
 	EndProjectSection
 EndProject
 Global
