@@ -2,102 +2,111 @@
 <Defs>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>Turret_Auto_Mortar</defName>
-    <label>auto-mortar</label>
-    <description>An automatic mortar that launches all kinds of shells. While it can inflict devastating damage, the mortar's ai needs time to calculate co-ordinates and angles, making it slower, if more accurate, than a human-operated turret.</description>
-    <thingClass>Building_TurretGun</thingClass>
-    <graphicData>
-      <texPath>Things/AutoMortar_Base</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(5, 5)</drawSize>
-      <damageData>
-        <rect>(0.2,0.2,0.6,0.6)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(1.5,0.35,1.4)</volume>
-        <offset>(0,0,-0.05)</offset>
-      </shadowData>
-    </graphicData>
-    <uiIconPath>Things/AutoMortar_MenuIcon</uiIconPath>
-    <altitudeLayer>Building</altitudeLayer>
-	<minifiedDef>MinifiedThing</minifiedDef>
-	<thingCategories>
-      <li>BuildingsSecurity</li>
-    </thingCategories>
-    <stealable>false</stealable>
-    <rotatable>false</rotatable>
-    <size>(3,3)</size>
-    <statBases>
-      <MaxHitPoints>250</MaxHitPoints>
-      <Flammability>0.7</Flammability>
-      <WorkToBuild>20000</WorkToBuild>
-      <Mass>100</Mass>
-      <Beauty>-20</Beauty>
-      <ShootingAccuracyTurret>0.996</ShootingAccuracyTurret>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>5.9</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>150</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>
-      <li Class="CompProperties_Refuelable">
-        <fuelLabel>Shells Remaining</fuelLabel>
-        <fuelGizmoLabel>Belt</fuelGizmoLabel>
-        <fuelFilter>
-          <thingDefs>
-            <li>Shell_HighExplosive</li>
-          </thingDefs>
-        </fuelFilter>
-        <fuelCapacity>21</fuelCapacity>
-        <initialFuelPercent>0</initialFuelPercent>
-        <autoRefuelPercent>1</autoRefuelPercent>
-        <showFuelGizmo>true</showFuelGizmo>
-        <minimumFueledThreshold>1</minimumFueledThreshold>
-        <fuelMultiplier>1</fuelMultiplier>
-        <factorByDifficulty>false</factorByDifficulty>
-        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <outOfFuelMessage>Cannot shoot: Needs shells</outOfFuelMessage>
-        <fuelIconPath>Things/HE_Shell</fuelIconPath>
-      </li>
-    </comps>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <fillPercent>0.5</fillPercent>
-    <hasTooltip>true</hasTooltip>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <costStuffCount>50</costStuffCount>
-    <costList>
-      <Steel>250</Steel>
-      <ComponentIndustrial>15</ComponentIndustrial>
-    </costList>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <specialDisplayRadius>29.9</specialDisplayRadius>
-    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-    <building>
-      <ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>Gun_AutoMortarTurret</turretGunDef>
-      <turretBurstCooldownTime>45</turretBurstCooldownTime>
-      <turretTopDrawSize>3.5</turretTopDrawSize>
-    </building>
-    <placeWorkers>
-      <li>PlaceWorker_TurretTop</li>
-    </placeWorkers>
-    <researchPrerequisites>
-      <li>Mortars</li>
-    </researchPrerequisites>
-    <uiIconScale>0.95</uiIconScale>
+	  <category>Building</category>
+	  <thingCategories>
+        <li>BuildingsSecurity</li>
+      </thingCategories>
+	  <defName>Turret_Auto_Mortar</defName>
+	  <label>auto-mortar</label>
+	  <thingClass>Building_TurretGun</thingClass>
+	  <graphicData>
+	      <texPath>Things/AutoMortar_Base</texPath>
+	      <graphicClass>Graphic_Single</graphicClass>
+	      <drawSize>(5,5)</drawSize>
+	      <damageData>
+		      <rect>(0.2,0.2,0.6,0.6)</rect>
+	      </damageData>
+	      <shadowData>
+		      <volume>(1.5,0.35,1.4)</volume>
+		      <offset>(0,0,-0.05)</offset>
+	      </shadowData>
+	  </graphicData>
+	  <minifiedDef>MinifiedThing</minifiedDef>
+	  <altitudeLayer>Building</altitudeLayer>
+	  <stealable>false</stealable>
+	  <rotatable>false</rotatable>
+	  <hasInteractionCell>True</hasInteractionCell>
+	  <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+	  <useHitPoints>true</useHitPoints>
+	  <statBases>
+		  <MaxHitPoints>250</MaxHitPoints>
+		  <Flammability>0.7</Flammability>
+		  <WorkToBuild>20000</WorkToBuild>
+		  <Mass>100</Mass>
+		  <Beauty>-20</Beauty>
+		  <ShootingAccuracyTurret>0.996</ShootingAccuracyTurret>
+      </statBases>
+	  <tickerType>Normal</tickerType>
+		  <comps>
+	      <li Class="CompProperties_Explosive">
+	        <explosiveRadius>5.9</explosiveRadius>
+	        <explosiveDamageType>Bomb</explosiveDamageType>
+	        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+	      </li>
+	      <li Class="CompProperties_Forbiddable"/>
+	      <li Class="CompProperties_Power">
+	        <compClass>CompPowerTrader</compClass>
+	        <basePowerConsumption>150</basePowerConsumption>
+	      </li>
+	      <li Class="CompProperties_Flickable"/>
+	      <li Class="CompProperties_Breakdownable"/>
+	      <li Class="CompProperties_Refuelable">
+	        <fuelLabel>Shells Remaining</fuelLabel>
+	        <fuelGizmoLabel>Belt</fuelGizmoLabel>
+	        <fuelFilter>
+	          <thingDefs>
+	            <li>Shell_HighExplosive</li>
+	          </thingDefs>
+	        </fuelFilter>
+	        <fuelCapacity>21</fuelCapacity>
+	        <initialFuelPercent>0</initialFuelPercent>
+	        <autoRefuelPercent>1</autoRefuelPercent>
+	        <showFuelGizmo>true</showFuelGizmo>
+	        <minimumFueledThreshold>1</minimumFueledThreshold>
+	        <fuelMultiplier>1</fuelMultiplier>
+	        <factorByDifficulty>false</factorByDifficulty>
+	        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+	        <outOfFuelMessage>Cannot shoot: Needs shells</outOfFuelMessage>
+	        <fuelIconPath>Things/HE_Shell</fuelIconPath>
+	      </li>
+		  </comps>
+	  <description>
+		  An automatic mortar that launches all kinds of shells. While it can inflict devastating damage,
+		  the mortar's ai needs time to calculate co-ordinates and angles, making it slower, if more accurate, than a human-operated turret.
+	  </description>
+	  <size>(3,3)</size>
+	  <passability>PassThroughOnly</passability>
+	  <pathCost>50</pathCost>
+	  <fillPercent>0.5</fillPercent>
+	  <castEdgeShadows>true</castEdgeShadows>
+	  <hasTooltip>true</hasTooltip>
+	  <stuffCategories>
+			<li>Metallic</li>
+	  </stuffCategories>
+	  <costStuffCount>50</costStuffCount>
+	  <costList>
+		  <Steel>250</Steel>
+		  <ComponentIndustrial>15</ComponentIndustrial>
+	  </costList>
+	  <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	  <designationCategory>Security</designationCategory>
+	  <building>
+		  <ai_combatDangerous>true</ai_combatDangerous>
+		  <turretGunDef>Gun_AutoMortarTurret</turretGunDef>
+		  <turretBurstCooldownTime>45</turretBurstCooldownTime>
+		  <turretTopDrawSize>3.5</turretTopDrawSize>
+	  </building>
+      <specialDisplayRadius>29.9</specialDisplayRadius>
+      <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	  <uiIconPath>Things/AutoMortar_MenuIcon</uiIconPath>
+	  <uiIconScale>1.25</uiIconScale>
+	  <placeWorkers>
+		  <li>PlaceWorker_TurretTop</li>
+      </placeWorkers>
+	  <researchPrerequisites>
+	      <li>Mortars</li>
+      </researchPrerequisites>
+
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
@@ -165,6 +174,5 @@
       </li>
     </verbs>
   </ThingDef>
-
 
 </Defs>
