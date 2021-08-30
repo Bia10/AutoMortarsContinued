@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+<!-- ============ Mortar Base ============ -->
   <ThingDef ParentName="BuildingBase">
 	  <category>Building</category>
 	  <thingCategories>
@@ -106,73 +106,70 @@
 	  <researchPrerequisites>
 	      <li>Mortars</li>
       </researchPrerequisites>
-
   </ThingDef>
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_AutoMortarTurret</defName>
-    <label>High-explosive shell</label>
-	<thingClass>Projectile_Explosive</thingClass>
-    <graphicData>
-      <texPath>Things/Projectile/ShellHighExplosive</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-	  <flyOverhead>true</flyOverhead>
-      <damageAmountBase>50</damageAmountBase>
-      <speed>88</speed>
-	  <explosionRadius >3.9</explosionRadius >
-	  <damageDef>Bomb</damageDef>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseWeaponTurret">
-    <defName>Gun_AutoMortarTurret</defName>
-    <label>automortar</label>
-    <description>good god this is a pain.</description>
-    <graphicData>
-      <texPath>Things/AutoMortar_Top</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(6.5,6.5)</drawSize>
-    </graphicData>
-    <soundInteract>Interact_Rifle</soundInteract>
-    <menuHidden>true</menuHidden>
-    <destroyOnDrop>true</destroyOnDrop>
-    <tradeability>None</tradeability>
-    <useHitPoints>false</useHitPoints>
-    <statBases>
-      <AccuracyTouch>0.1</AccuracyTouch>
-      <AccuracyShort>0.1</AccuracyShort>
-      <AccuracyMedium>0.1</AccuracyMedium>
-      <AccuracyLong>0.995</AccuracyLong>
-      <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
-      <DeteriorationRate>0</DeteriorationRate>
-      <Mass>40</Mass>
-      <Flammability>0</Flammability>
-    </statBases>
-    <weaponTags Inherit="false">
-      <li>Artillery_BaseDestroyer</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-        <hasStandardCommand>true</hasStandardCommand>
-		<defaultProjectile>Bullet_AutoMortarTurret</defaultProjectile>
-        <warmupTime>1.0</warmupTime>
-        <forcedMissRadius>5</forcedMissRadius>
-        <requireLineOfSight>false</requireLineOfSight>
-        <minRange>29.9</minRange>
-        <range>500</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>Mortar_LaunchA</soundCast>
-        <muzzleFlashScale>16</muzzleFlashScale>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-		<consumeFuelPerShot>1</consumeFuelPerShot>
-      </li>
-    </verbs>
-  </ThingDef>
-
+<!-- ========== Mortar Weapon Base ========== -->
+<ThingDef ParentName="BaseWeaponTurret">
+	<defName>Gun_AutoMortarTurret</defName>
+	<label>automortar</label>
+	<description>good god this is a pain.</description>
+	<graphicData>
+		<texPath>Things/AutoMortar_Top</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(6.5,6.5)</drawSize>
+	</graphicData>
+	<soundInteract>Interact_Rifle</soundInteract>
+	<destroyOnDrop>true</destroyOnDrop>
+	<tradeability>None</tradeability>
+	<useHitPoints>false</useHitPoints>
+	<statBases>
+		<AccuracyTouch>0.1</AccuracyTouch>
+		<AccuracyShort>0.1</AccuracyShort>
+		<AccuracyMedium>0.1</AccuracyMedium>
+		<AccuracyLong>0.995</AccuracyLong>
+		<RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+		<DeteriorationRate>0</DeteriorationRate>
+		<Mass>40</Mass>
+		<Flammability>0</Flammability>
+	</statBases>
+	<weaponTags Inherit="false">
+		<li>Artillery_BaseDestroyer</li>
+	</weaponTags>
+	<verbs>
+		<li>
+			<verbClass>Verb_Shoot</verbClass>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_AutoMortarTurret</defaultProjectile>
+			<warmupTime>1.0</warmupTime>
+			<forcedMissRadius>5</forcedMissRadius>
+			<requireLineOfSight>false</requireLineOfSight>
+			<minRange>29.9</minRange>
+			<range>500</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<muzzleFlashScale>16</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<consumeFuelPerShot>1</consumeFuelPerShot>
+		</li>
+	</verbs>
+</ThingDef>
+<!-- ========== Projectiles ========== -->
+	<ThingDef ParentName="BaseBullet">
+	    <defName>Bullet_AutoMortarTurret</defName>
+	    <label>High-explosive shell</label>
+		<thingClass>Projectile_Explosive</thingClass>
+	    <graphicData>
+	      <texPath>Things/Projectile/ShellHighExplosive</texPath>
+	      <graphicClass>Graphic_Single</graphicClass>
+	    </graphicData>
+	    <projectile>
+		  <flyOverhead>true</flyOverhead>
+	      <damageAmountBase>50</damageAmountBase>
+	      <speed>88</speed>
+		  <explosionRadius >3.9</explosionRadius >
+		  <damageDef>Bomb</damageDef>
+	    </projectile>
+	</ThingDef>
 </Defs>
